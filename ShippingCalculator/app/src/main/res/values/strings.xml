@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ShippingCalculator</string>
+    <string name="lblWeight">Enter parcel weight</string>
+    <string name="lblOunces">(in ounces)</string>
+    <string name="lblBaseCost">Base Cost:</string>
+    <string name="lblAddedCost">Added Cost:</string>
+    <string name="lblTotalCost">Total Shipping Cost:</string>
+    <string name="zeroDec">$0.00</string>
+    <string name="zero">0</string>
+
+    //Burger activity strings
+    <string name="btnBurger">Calorie Counter</string>
+    <string name="second_app_name">Burger Calorie Counter</string>
+    <string name="one">Beef Patty</string>
+    <string name="two">Veggie Patty</string>
+    <string name="three">Chickpea Patty</string>
+
+    <string name="prosciutto">Prosciutto</string>
+    <string name="asiago">Asiago Cheese</string>
+    <string name="creme">Creme Fraiche</string>
+
+    <string name="sauce">Caviar sauce up to one teaspoon:</string>
+    <string name="calories">Calories?</string>
+    <string name="imgBun">Bun</string>
+</resources>
