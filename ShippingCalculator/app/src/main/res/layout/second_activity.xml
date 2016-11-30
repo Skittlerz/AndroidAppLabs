@@ -24,10 +24,12 @@
             android:text="@string/one"
             android:checked="true"/>
         <RadioButton
+            android:id="@+id/rbTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/two"/>
         <RadioButton
+            android:id="@+id/rbThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/three"/>
@@ -37,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/prosciutto"
-        android:id="@+id/checkBox"
+        android:id="@+id/cbProsciutto"
         android:layout_below="@+id/rgPatty"
         android:layout_centerHorizontal="true" />
 
@@ -45,16 +47,19 @@
         android:id="@+id/rgCheese"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/checkBox"
+        android:layout_below="@+id/cbProsciutto"
         android:layout_centerHorizontal="true">
         <RadioButton
+            android:id="@+id/rgCone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/asiago"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/rgCtwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/creme"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/asiago"/>
     </RadioGroup>
 
     <TextView
