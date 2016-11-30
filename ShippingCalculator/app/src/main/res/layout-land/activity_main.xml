@@ -9,6 +9,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.braun1792.shippingcalculator.MainActivity"
     android:background="@drawable/shippingbck">
+<LinearLayout
+    android:id="@+id/linearLayout1"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:orientation="vertical"
+    android:background="@drawable/paper"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp">
 
     <TextView
         android:id="@+id/tvWeight"
@@ -31,6 +41,7 @@
         android:hint="@string/zero">
         <requestFocus/>
     </EditText>
+
     <TextView
         android:id="@+id/tvOunces"
         android:layout_width="wrap_content"
@@ -39,19 +50,16 @@
         android:layout_centerHorizontal="true"
         android:text="@string/lblOunces"
         android:textAppearance="?android:attr/textAppearanceSmall"/>
+</LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etWeight"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/paper">
     <TextView
         android:id="@+id/tvBase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="44dp"
+        android:layout_toRightOf="@+id/linearLayout1"
         android:paddingLeft="@dimen/output_margin_buffer"
         android:text="@string/lblBaseCost"
         android:textAppearance="?android:attr/textAppearanceMedium"/>
@@ -71,9 +79,9 @@
         android:id="@+id/tvAdded"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@id/tvBase"
-        android:paddingTop="10dp"
+        android:layout_alignLeft="@+id/tvBase"
+        android:marginTop="16dp"
         android:text="@string/lblAddedCost"
         android:paddingLeft="@dimen/output_margin_buffer"
         android:textAppearance="?android:attr/textAppearanceMedium"/>
@@ -93,7 +101,7 @@
         android:id="@+id/tvTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@+id/tvAdded"
         android:layout_below="@id/tvAdded"
         android:paddingTop="10dp"
         android:text="@string/lblTotalCost"
@@ -110,6 +118,6 @@
         android:layout_alignParentRight="true"
         android:paddingRight="@dimen/output_margin_buffer"
         android:textAppearance="?android:attr/textAppearanceMedium"/>
-</RelativeLayout>
+
 
 </RelativeLayout>
