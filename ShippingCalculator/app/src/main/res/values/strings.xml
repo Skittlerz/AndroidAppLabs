@@ -1,6 +1,8 @@
 <resources>
+    <string name="app_name">Demo Android Apps</string>
+
+    //Shipping Calculator strings
     <string name="btnShipping">Shipping Calculator</string>
-    <string name="app_name">ShippingCalculator</string>
     <string name="lblWeight">Enter parcel weight</string>
     <string name="lblOunces">(in ounces)</string>
     <string name="lblBaseCost">Base Cost:</string>
@@ -23,4 +25,27 @@
     <string name="sauce">Caviar sauce up to one teaspoon:</string>
     <string name="calories">Calories?</string>
     <string name="imgBun">Bun</string>
+
+    //Calculator activity strings
+    <string name="calcApp">Calculator</string>
+    <string name="digitOne">1</string>
+    <string name="digitTwo">2</string>
+    <string name="digitThree">3</string>
+    <string name="digitFour">4</string>
+    <string name="digitFive">5</string>
+    <string name="digitSix">6</string>
+    <string name="digitSeven">7</string>
+    <string name="digitEight">8</string>
+    <string name="digitNine">9</string>
+    <string name="digitZero">0</string>
+    
+    <string name="ac">AC</string>
+    <string name="sign">+/-</string>
+    <string name="percent">%</string>
+    <string name="div">/</string>
+    <string name="mult">*</string>
+    <string name="subtract">-</string>
+    <string name="add">+</string>
+    <string name="equal">=</string>
+    <string name="decimal">.</string>
 </resources>

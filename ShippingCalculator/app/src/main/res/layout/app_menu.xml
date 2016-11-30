@@ -20,4 +20,14 @@
         android:layout_centerHorizontal="true"
         android:onClick="calorieScreen"
         android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calcApp"
+        android:id="@+id/btnCalculator"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/btnCalorie"
+        android:onClick="calculatorScreen" />
+
 </LinearLayout>

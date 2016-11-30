@@ -81,7 +81,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tvBase"
         android:layout_alignLeft="@+id/tvBase"
-        android:marginTop="16dp"
         android:text="@string/lblAddedCost"
         android:paddingLeft="@dimen/output_margin_buffer"
         android:textAppearance="?android:attr/textAppearanceMedium"/>
@@ -119,5 +118,13 @@
         android:paddingRight="@dimen/output_margin_buffer"
         android:textAppearance="?android:attr/textAppearanceMedium"/>
 
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/linearLayout1"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="90dp"></TableLayout>
 
 </RelativeLayout>

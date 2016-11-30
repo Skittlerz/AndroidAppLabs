@@ -26,4 +26,10 @@ public class appMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void calculatorScreen(View view)
+    {
+        Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
+    }
 }

@@ -14,12 +14,9 @@
             <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:label="@string/app_name">
-
-        </activity>
-        <activity android:name=".SecondActivity" android:label="@string/second_app_name">
-
-        </activity>
+        <activity android:name=".MainActivity" android:label="@string/btnShipping"></activity>
+        <activity android:name=".SecondActivity" android:label="@string/second_app_name"></activity>
+        <activity android:name=".ThirdActivity" android:label="@string/calcApp"></activity>
     </application>
 
 </manifest>
