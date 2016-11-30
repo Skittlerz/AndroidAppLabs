@@ -105,15 +105,5 @@
         android:paddingRight="@dimen/output_margin_buffer"
         android:textAppearance="?android:attr/textAppearanceMedium"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnBurger"
-        android:id="@+id/button"
-        android:layout_below="@+id/tvTotal"
-        android:layout_marginTop="92dp"
-        android:layout_centerHorizontal="true"
-        android:onClick="nextScreen"/>
-
 
 </RelativeLayout>

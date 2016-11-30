@@ -1,4 +1,5 @@
 <resources>
+    <string name="btnShipping">Shipping Calculator</string>
     <string name="app_name">ShippingCalculator</string>
     <string name="lblWeight">Enter parcel weight</string>
     <string name="lblOunces">(in ounces)</string>

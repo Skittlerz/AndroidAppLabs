@@ -5,9 +5,10 @@ package com.braun1792.shippingcalculator;
  */
 
 public class Burger {
+
     static final int BEEF = 100;
-    static final int VEGGIE = 170;
-    static final int CHICKPEA = 150;
+    static final int VEGGIE = 70;
+    static final int CHICKPEA = 120;
     static final int PROSCIUTTO = 115;
     static final int ASIAGO = 90;
     static final int CREMEFRAICHE = 120;

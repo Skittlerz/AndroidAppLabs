@@ -54,9 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
         private void displayShipping(){
 
-            //tvBaseCost.setText(Double.toString(shipItem.getBaseCost()));
-            //tvAddedCost.setText(Double.toString(shipItem.getAddedCost()));
-            //tvTotalCost.setText(Double.toString(shipItem.getTotalCost()));
             tvBaseCost.setText("$"+String.format("%.02f", shipItem.getBaseCost()));
             tvAddedCost.setText("$"+String.format("%.02f", shipItem.getAddedCost()));
             tvTotalCost.setText("$"+String.format("%.02f", shipItem.getTotalCost()));
