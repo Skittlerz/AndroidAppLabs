@@ -42,20 +42,7 @@ public class SecondActivity extends AppCompatActivity {
         tvCalories = (TextView) findViewById(R.id.tvCalories);
 
     }
-    /**
-     *
-     * HEX values in R class
-     rgPatty=0x7f0b006d;
-     rbOne=0x7f0b006e;
-     rbTwo=0x7f0b006f;
-     rbThree=0x7f0b0070;
-
-     rgCheese=0x7f0b0072;
-     rgCone=0x7f0b0073;
-     rgCtwo=0x7f0b0074;
-     **/
-
-
+    
 
     private void registerChangeListener(){
         rgPatty.setOnCheckedChangeListener(foodListener);
@@ -68,19 +55,19 @@ public class SecondActivity extends AppCompatActivity {
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int i) {
             switch (i){
-                case 0x7f0b006e: //Beef
+                case R.id.rbOne: //Beef
                     burger.setPattyCalories(Burger.BEEF);
                     break;
-                case 0x7f0b006f: //Veggie
+                case R.id.rbTwo: //Veggie
                     burger.setPattyCalories(Burger.VEGGIE);
                     break;
-                case 0x7f0b0070: //Chickpea
+                case R.id.rbThree: //Chickpea
                     burger.setPattyCalories(Burger.CHICKPEA);
                     break;
-                case 0x7f0b0073: // Asiago
+                case R.id.rgCone: // Asiago
                     burger.setCheeseCalories(Burger.ASIAGO);
                     break;
-                case 0x7f0b0074: //Creme Fraiche
+                case R.id.rgCtwo: //Creme Fraiche
                     burger.setCheeseCalories(Burger.CREMEFRAICHE);
                     break;
             }
