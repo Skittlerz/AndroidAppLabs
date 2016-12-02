@@ -42,7 +42,7 @@ public class SecondActivity extends AppCompatActivity {
         tvCalories = (TextView) findViewById(R.id.tvCalories);
 
     }
-    
+
 
     private void registerChangeListener(){
         rgPatty.setOnCheckedChangeListener(foodListener);
