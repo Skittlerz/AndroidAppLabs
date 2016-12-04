@@ -48,4 +48,7 @@
     <string name="add">+</string>
     <string name="equal">=</string>
     <string name="decimal">.</string>
+
+    //renaissance paintings app
+    <string name="paintApp">Renaissance Paintings</string>
 </resources>

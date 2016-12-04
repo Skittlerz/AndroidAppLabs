@@ -32,4 +32,10 @@ public class appMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
     }
+
+    public void paintingScreen(View view)
+    {
+        Intent intent = new Intent(this, FourthActivity.class);
+        startActivity(intent);
+    }
 }

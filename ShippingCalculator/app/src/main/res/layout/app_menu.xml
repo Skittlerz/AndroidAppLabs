@@ -27,7 +27,16 @@
         android:text="@string/calcApp"
         android:id="@+id/btnCalculator"
         android:layout_gravity="center_horizontal"
-        android:layout_below="@id/btnCalorie"
+        android:layout_below="@+id/btnCalorie"
         android:onClick="calculatorScreen" />
+
+    <Button
+        android:text="@string/paintApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPaintApp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/btnCalculator"
+        android:onClick="paintingScreen"/>
 
 </LinearLayout>
