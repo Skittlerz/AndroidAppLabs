@@ -38,4 +38,10 @@ public class appMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FourthActivity.class);
         startActivity(intent);
     }
+
+    public void personnelScreen(View view)
+    {
+        Intent intent = new Intent(this, MyActivity.class);
+        startActivity(intent);
+    }
 }

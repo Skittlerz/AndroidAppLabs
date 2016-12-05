@@ -39,4 +39,13 @@
         android:layout_below="@+id/btnCalculator"
         android:onClick="paintingScreen"/>
 
+    <Button
+        android:text="@string/personnelApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPersonnel"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/btnPaintApp"
+        android:onClick="personnelScreen"/>
+
 </LinearLayout>
