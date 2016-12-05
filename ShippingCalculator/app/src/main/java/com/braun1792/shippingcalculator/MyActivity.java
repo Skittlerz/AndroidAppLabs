@@ -5,11 +5,13 @@ import android.support.v4.util.LogWriter;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import java.text.ParseException;
@@ -19,6 +21,7 @@ import java.text.ParseException;
  */
 
 public class MyActivity extends AppCompatActivity{
+
     ImageView ivIcon;
     EditText etName;
     EditText etAddress;
@@ -93,10 +96,41 @@ public class MyActivity extends AppCompatActivity{
         }
     };
 
+    public AdapterView.OnItemSelectedListener dropDownOptions = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            switch(view.getId()) {
+                case R.id.spnMarried:
+                    boolean married = false;
+                    if (i == 0) {
+                        married = true;
+                    }
+                    pd.employees[record].setMarried(married);
+                    break;
+                case R.id.spnRole:
+                    String role;
+                    if(i == 0){
+                        role = "Staff";
+                    }else{
+                        role = "Supervisor";
+                    }
+                    pd.employees[record].setRole(role);
+                    break;
+            }
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+
+        }
+    };
+
     public void registerListeners(){
 
         btnNext.setOnClickListener(pagination);
         btnPrevious.setOnClickListener(pagination);
+        mSpinner.setOnItemSelectedListener(dropDownOptions);
+        rSpinner.setOnItemSelectedListener(dropDownOptions);
     }
 
     public void showRecord(int r){
@@ -110,6 +144,17 @@ public class MyActivity extends AppCompatActivity{
         etPositon.setText(pd.employees[r].getPosition());
         etSupervisor.setText(pd.employees[r].getSupervisor());
 
+        if(pd.employees[r].isMarried()){
+            mSpinner.setSelection(0);
+        }else{
+            mSpinner.setSelection(1);
+        }
+
+        if(pd.employees[r].getRole().equals("Staff")){
+            rSpinner.setSelection(0);
+        }else{
+            rSpinner.setSelection(1);
+        }
     }
 
     public void saveRecord(int r){
