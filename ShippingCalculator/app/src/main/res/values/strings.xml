@@ -54,6 +54,7 @@
 
     //personnel app
     <string name="personnelApp">Personnel Directory</string>
+    <string name="id">Personnel ID</string>
     <string name="name">Name</string>
     <string name="address">Address</string>
     <string name="phone">Phone</string>

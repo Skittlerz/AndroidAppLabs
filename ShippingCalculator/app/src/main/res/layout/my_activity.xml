@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_span="2"
             android:layout_gravity="center_horizontal"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:id="@+id/textView" />
 
         <ImageView
@@ -39,14 +39,35 @@
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:text="@string/id"
+            android:textSize="12sp"
+            android:id="@+id/tvId"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="12sp"
+            android:layout_span="3"
+            android:id="@+id/etId" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
             android:text="@string/name"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:id="@+id/tvName"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
+            android:textSize="12sp"
             android:layout_span="3"
             android:id="@+id/etName" />
     </TableRow>
@@ -57,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/address"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:id="@+id/tvAddress"/>
 
         <EditText
@@ -65,6 +86,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPostalAddress"
             android:layout_span="3"
+            android:textSize="12sp"
             android:id="@+id/etAddress" />
     </TableRow>
 
@@ -76,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/phone"
-        android:textSize="15sp"
+        android:textSize="12sp"
         android:id="@+id/tvPhone"/>
 
     <EditText
@@ -84,6 +106,7 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:layout_span="3"
+        android:textSize="12sp"
         android:id="@+id/etPhone" />
 
     </TableRow>
@@ -96,12 +119,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/email"
-        android:textSize="15sp"
+        android:textSize="12sp"
         android:id="@+id/tvEmail"/>
 
         <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="12sp"
         android:inputType="textEmailAddress"
         android:layout_span="3"
         android:id="@+id/etEmail" />
@@ -114,7 +138,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/birthdate"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:id="@+id/tvBirthdate"/>
 
         <EditText
@@ -122,6 +146,7 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:layout_span="3"
+            android:textSize="12sp"
             android:id="@+id/etBirthdate" />
     </TableRow>
     <TableRow
@@ -131,12 +156,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/age"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:id="@+id/tvAge"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_span="3"
+            android:textSize="12sp"
             android:id="@+id/tvAgeNumber"/>
     </TableRow>
     <TableRow
@@ -146,13 +172,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/married"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:id="@+id/tvMarried"/>
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spnMarried" />
+            android:id="@+id/spnMarried"
+            android:textSize="12sp"/>
 
     </TableRow>
     <TableRow
@@ -162,12 +189,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/position"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:id="@+id/tvPosition"/>
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_span="3"
+            android:textSize="12sp"
             android:id="@+id/etPosition"/>
 
     </TableRow>
@@ -178,12 +206,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/role"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:id="@+id/tvRole"/>
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spnRole" />
+            android:id="@+id/spnRole"
+            android:textSize="12sp"/>
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -192,7 +221,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/supervisor"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:id="@+id/tvSupervisor"/>
 
         <EditText
@@ -200,6 +229,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:layout_span="3"
+            android:textSize="12sp"
             android:id="@+id/etSupervisor" />
     </TableRow>
     <TableRow

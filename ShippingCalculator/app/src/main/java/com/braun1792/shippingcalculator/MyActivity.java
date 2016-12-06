@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import com.braun1792.shippingcalculator.Personnel.*;
 
 import java.text.ParseException;
 
@@ -23,6 +24,7 @@ import java.text.ParseException;
 public class MyActivity extends AppCompatActivity{
 
     ImageView ivIcon;
+    EditText etId;
     EditText etName;
     EditText etAddress;
     EditText etPhone;
@@ -50,6 +52,7 @@ public class MyActivity extends AppCompatActivity{
 
         //set views
         ivIcon = (ImageView) findViewById(R.id.ivIcon);
+        etId = (EditText) findViewById(R.id.etId);
         etName = (EditText) findViewById(R.id.etName);
         etAddress = (EditText) findViewById(R.id.etAddress);
         etPhone = (EditText) findViewById(R.id.etPhone);
@@ -99,6 +102,7 @@ public class MyActivity extends AppCompatActivity{
     public AdapterView.OnItemSelectedListener dropDownOptions = new AdapterView.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
             switch(view.getId()) {
                 case R.id.spnMarried:
                     boolean married = false;
@@ -108,11 +112,11 @@ public class MyActivity extends AppCompatActivity{
                     pd.employees[record].setMarried(married);
                     break;
                 case R.id.spnRole:
-                    String role;
+                    Role role;
                     if(i == 0){
-                        role = "Staff";
+                        role = Role.STAFF;
                     }else{
-                        role = "Supervisor";
+                        role = Role.SUPERVISOR;
                     }
                     pd.employees[record].setRole(role);
                     break;
@@ -135,6 +139,7 @@ public class MyActivity extends AppCompatActivity{
 
     public void showRecord(int r){
 
+        etId.setText(Integer.toString(pd.employees[r].getPersonnelID()));
         etName.setText(pd.employees[r].getName());
         etAddress.setText(pd.employees[r].getAddress());
         etPhone.setText(pd.employees[r].getPhone());
@@ -150,7 +155,7 @@ public class MyActivity extends AppCompatActivity{
             mSpinner.setSelection(1);
         }
 
-        if(pd.employees[r].getRole().equals("Staff")){
+        if(pd.employees[r].getRole().equals(Role.STAFF)){
             rSpinner.setSelection(0);
         }else{
             rSpinner.setSelection(1);
@@ -159,6 +164,7 @@ public class MyActivity extends AppCompatActivity{
 
     public void saveRecord(int r){
         try {
+            pd.employees[r].setPersonnelID(Integer.parseInt(etId.getText().toString()));
             pd.employees[r].setName(etName.getText().toString());
             pd.employees[r].setAddress(etAddress.getText().toString());
             pd.employees[r].setPhone(etPhone.getText().toString());
@@ -197,4 +203,6 @@ public class MyActivity extends AppCompatActivity{
 
         showRecord(record);
     }
+
+
 }

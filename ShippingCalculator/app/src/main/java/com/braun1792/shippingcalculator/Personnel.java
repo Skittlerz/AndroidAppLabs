@@ -21,7 +21,7 @@ public class Personnel {
     private String phone;
     private String  email;
     private String position;
-    private String role;
+    private Role role;
     private String supervisor;
     private Date birthdate;
     private int age;
@@ -30,7 +30,7 @@ public class Personnel {
     public Personnel(){}
 
     public Personnel(int personId, int picId, String name, String address, String phone, String email,
-                     String position, String role, String supervisor, String birthdate, boolean married){
+                     String position, Role role, String supervisor, String birthdate, boolean married){
         try {
             setPersonnelID(personId);
             setPictureID(picId);
@@ -103,11 +103,11 @@ public class Personnel {
         this.position = position;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 
@@ -165,5 +165,8 @@ public class Personnel {
     }
 
 
+    public enum Role{
+        STAFF, SUPERVISOR
+    }
 
 }
