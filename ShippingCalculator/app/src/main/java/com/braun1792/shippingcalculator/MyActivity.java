@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.braun1792.shippingcalculator.Personnel.*;
 
 import java.text.ParseException;
@@ -103,7 +105,7 @@ public class MyActivity extends AppCompatActivity{
         @Override
         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-            switch(view.getId()) {
+            switch(adapterView.getId()) {
                 case R.id.spnMarried:
                     boolean married = false;
                     if (i == 0) {
@@ -121,6 +123,9 @@ public class MyActivity extends AppCompatActivity{
                     pd.employees[record].setRole(role);
                     break;
             }
+            //Toast used for debugging
+            //Toast.makeText(getApplicationContext(), "married:"+pd.employees[record].isMarried() +
+            //" role:" + pd.employees[record].getRole(), Toast.LENGTH_LONG).show();
         }
 
         @Override
@@ -149,17 +154,25 @@ public class MyActivity extends AppCompatActivity{
         etPositon.setText(pd.employees[r].getPosition());
         etSupervisor.setText(pd.employees[r].getSupervisor());
 
+        if(pd.employees[r].getPictureID() == 0){
+            ivIcon.setImageResource(R.drawable.female);
+        }else{
+            ivIcon.setImageResource(R.drawable.male);
+        }
+
         if(pd.employees[r].isMarried()){
             mSpinner.setSelection(0);
         }else{
             mSpinner.setSelection(1);
         }
 
-        if(pd.employees[r].getRole().equals(Role.STAFF)){
+
+        if(pd.employees[r].getRole() == Role.STAFF){
             rSpinner.setSelection(0);
         }else{
             rSpinner.setSelection(1);
         }
+
     }
 
     public void saveRecord(int r){

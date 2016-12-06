@@ -47,14 +47,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:textSize="12sp"
-            android:layout_span="3"
             android:id="@+id/etId" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -67,7 +60,6 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:textSize="12sp"
-            android:layout_span="3"
             android:id="@+id/etName" />
     </TableRow>
     <TableRow
@@ -104,15 +96,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="phone"
-        android:layout_span="3"
         android:textSize="12sp"
         android:id="@+id/etPhone" />
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <TextView
         android:layout_width="wrap_content"
@@ -126,7 +111,6 @@
         android:layout_height="wrap_content"
         android:textSize="12sp"
         android:inputType="textEmailAddress"
-        android:layout_span="3"
         android:id="@+id/etEmail" />
     </TableRow>
 
@@ -144,13 +128,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:layout_span="3"
             android:textSize="12sp"
             android:id="@+id/etBirthdate" />
-    </TableRow>
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -160,7 +139,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="3"
             android:textSize="12sp"
             android:id="@+id/tvAgeNumber"/>
     </TableRow>
@@ -180,10 +158,6 @@
             android:id="@+id/spnMarried"
             android:textSize="12sp"/>
 
-    </TableRow>
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -193,7 +167,6 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="3"
             android:textSize="12sp"
             android:id="@+id/etPosition"/>
 
@@ -212,10 +185,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/spnRole"
             android:textSize="12sp"/>
-    </TableRow>
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -227,7 +196,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:layout_span="3"
             android:textSize="12sp"
             android:id="@+id/etSupervisor" />
     </TableRow>
