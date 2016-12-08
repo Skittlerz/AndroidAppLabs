@@ -153,12 +153,13 @@ public class MyActivity extends AppCompatActivity{
         tvAge.setText(Integer.toString(pd.employees[r].getAge()));
         etPositon.setText(pd.employees[r].getPosition());
         etSupervisor.setText(pd.employees[r].getSupervisor());
+        ivIcon.setImageResource(pd.employees[r].getPictureID());
 
-        if(pd.employees[r].getPictureID() == 0){
-            ivIcon.setImageResource(R.drawable.female);
-        }else{
-            ivIcon.setImageResource(R.drawable.male);
-        }
+        //if(pd.employees[r].getPictureID() == 0){
+            //ivIcon.setImageResource(R.drawable.female);
+        //}else{
+            //ivIcon.setImageResource(R.drawable.male);
+        //}
 
         if(pd.employees[r].isMarried()){
             mSpinner.setSelection(0);
