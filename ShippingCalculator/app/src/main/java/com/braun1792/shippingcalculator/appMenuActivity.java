@@ -44,4 +44,18 @@ public class appMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MyActivity.class);
         startActivity(intent);
     }
+
+    public void onClick(View view){
+        Intent i = new Intent(this, PassingDataActivity.class);
+        i.putExtra("stuff", "extra stuff");
+        i.putExtra("age",29);
+
+        Bundle extra = new Bundle();
+        extra.putString("bundle string","this is the bundle string");
+        extra.putInt("bundle int", 42);
+
+        i.putExtras(extra);
+
+        startActivity(i);
+    }
 }

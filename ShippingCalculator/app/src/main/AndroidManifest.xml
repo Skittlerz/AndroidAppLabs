@@ -19,6 +19,12 @@
         <activity android:name=".ThirdActivity" android:label="@string/calcApp"></activity>
         <activity android:name=".FourthActivity" android:label="@string/paintApp" android:screenOrientation="portrait"></activity>
         <activity android:name=".MyActivity" android:label="@string/personnelApp"></activity>
+        <activity android:name=".PassingDataActivity" android:label="@string/passingData">
+            <intent-filter >
+                <action android:name="com.braun1792.PassingDataActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
     </application>
 

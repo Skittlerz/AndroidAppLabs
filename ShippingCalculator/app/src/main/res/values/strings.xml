@@ -75,4 +75,9 @@
     </string-array>
     <string name="prev">Previous</string>
     <string name="next">Next</string>
+
+    //passing data
+    <string name="passingData">Passing Data</string>
+    <string name="message">Hello!</string>
+    <string name="click">Click Me</string>
 </resources>
