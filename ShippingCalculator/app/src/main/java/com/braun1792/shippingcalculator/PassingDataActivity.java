@@ -1,6 +1,7 @@
 package com.braun1792.shippingcalculator;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -30,8 +31,12 @@ public class PassingDataActivity extends AppCompatActivity{
     }
 
     public void onClick(View view){
+
         Intent i = new Intent();
 
         i.putExtra("random int", 38);
+        i.setData(Uri.parse("Passed back to main activity"));
+        setResult(RESULT_OK, i);
+        finish();
     }
 }

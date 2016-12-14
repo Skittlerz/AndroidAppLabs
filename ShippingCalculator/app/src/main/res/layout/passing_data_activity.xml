@@ -19,5 +19,6 @@
         android:text="@string/click"
         android:id="@+id/button"
         android:layout_gravity="center_horizontal"
-        android:layout_below="@+id/textView2"/>
+        android:layout_below="@+id/textView2"
+        android:onClick="onClick" />
 </LinearLayout>

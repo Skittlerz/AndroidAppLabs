@@ -25,6 +25,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".PaintingCalculatorActivity" android:label="@string/paintCalc"></activity>
+        <activity android:name=".PaintHelpActivity" android:label="@string/paintCalc"
+            android:parentActivityName=".PaintingCalculatorActivity">
+        <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".PaintingCalculatorActivity" />
+        </activity>
 
     </application>
 
