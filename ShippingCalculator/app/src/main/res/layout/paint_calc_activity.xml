@@ -94,43 +94,66 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHowMany"
+        android:layout_marginTop="25dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/textView8" />
+        android:text="@string/doors"
+        android:id="@+id/tvDoors" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText4"
+        android:layout_alignBottom="@+id/tvDoors"
+        android:layout_alignRight="@+id/tvInstructions"
+        android:id="@+id/etDoors"
         android:layout_gravity="right" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/textView9" />
+        android:layout_below="@+id/tvDoors"
+        android:layout_marginTop="25dp"
+        android:text="@string/windows"
+        android:id="@+id/tvWindows" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText5"
+        android:layout_alignBottom="@+id/tvWindows"
+        android:layout_alignRight="@+id/tvInstructions"
+        android:id="@+id/etWindows"
         android:layout_gravity="right" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button2" />
+        android:layout_below="@+id/etWindows"
+        android:text="@string/help"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/btnHelp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button3"
-        android:layout_gravity="right" />
+        android:text="@string/compute"
+        android:id="@+id/btnCompute"
+        android:layout_below="@+id/btnHelp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/tvGallons"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignStart="@+id/etWindows" />
+
 </RelativeLayout>
