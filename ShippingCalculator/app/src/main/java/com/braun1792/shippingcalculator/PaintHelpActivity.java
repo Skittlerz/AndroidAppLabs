@@ -2,6 +2,7 @@ package com.braun1792.shippingcalculator;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -27,6 +28,8 @@ public class PaintHelpActivity extends AppCompatActivity {
         setContentView(R.layout.paint_help_activity);
 
         referenceUIcomponents();
+
+        mRoom = new InteriorRoom();
     }
 
     private void referenceUIcomponents(){
@@ -36,5 +39,21 @@ public class PaintHelpActivity extends AppCompatActivity {
         etDoors = (EditText) findViewById(R.id.etDoors);
         etWindows = (EditText) findViewById(R.id.etWindows);
         nGallonsV = (TextView) findViewById(R.id.tvGallons);
+    }
+
+    public void computeGallons(View view){
+        double l = Double.valueOf(etLength.getText().toString());
+        double h = Double.valueOf(etHeight.getText().toString());
+        double w = Double.valueOf(etWidth.getText().toString());
+        mRoom.setmLength(l);
+        mRoom.setmHeight(h);
+        mRoom.setmWidth(w);
+
+        int doors = Integer.valueOf(etDoors.getText().toString());
+        int windows = Integer.valueOf(etWindows.getText().toString());
+        mRoom.setmDoors(doors);
+        mRoom.setmWindows(windows);
+
+        nGallonsV.setText("Interior surface area: " + mRoom.surfaceArea() + " feet" + "\nGallons needed: "+ mRoom.gallons());
     }
 }
