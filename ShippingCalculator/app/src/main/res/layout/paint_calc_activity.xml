@@ -51,7 +51,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/width"
         android:id="@+id/tvWidth"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/tvLength"/>
 
     <EditText
@@ -69,7 +69,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/height"
         android:layout_below="@+id/tvWidth"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/tvHeight" />
 
     <EditText
@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_below="@+id/tvDoors"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:text="@string/windows"
         android:id="@+id/tvWindows" />
 
@@ -135,8 +135,9 @@
         android:layout_below="@+id/etWindows"
         android:text="@string/help"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:id="@+id/btnHelp" />
+        android:layout_marginTop="10dp"
+        android:id="@+id/btnHelp"
+        android:onClick="goToHelp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -144,14 +145,16 @@
         android:text="@string/compute"
         android:id="@+id/btnCompute"
         android:layout_below="@+id/btnHelp"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="computeGallons" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/tvGallons"
+        android:layout_below="@+id/btnCompute"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_alignStart="@+id/etWindows" />
