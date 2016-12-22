@@ -1,0 +1,33 @@
+<resources>
+    //First Activity
+    <string name="app_name">AutoCalc</string>
+    <string name="name">Auto Purchase</string>
+    <string name="info">Enter car purchase information.</string>
+    <string name="price">What is the price of your car?</string>
+    <string name="downPayment">What is the down payment?</string>
+    <string-array name="term_array">
+        <item>2 years</item>
+        <item>3 years</item>
+        <item>4 years</item>
+    </string-array>
+    <string name="two">2 years</string>
+    <string name="three">3 years</string>
+    <string name="four">4 years</string>
+    <string name="loanTerm">Choose your loan term:</string>
+    <string name="report">Loan Report</string>
+
+    //Second Activity
+    <string name="summary">Your loan summary.</string>
+    <string name="payment">Monthly payment</string>
+    <string name="stickerPrice">Car sticker price:</string>
+    <string name="putDown">You will put down:</string>
+    <string name="tax">Taxed amount:</string>
+    <string name="cost">Your cost:</string>
+    <string name="borrowed">Borrowed amount:</string>
+    <string name="interest">Interest amount:</string>
+    <string name="term">Loan term is</string>
+    <string name="note">Note: \n 1. Loan information is made available by Tom's Car Dealership. \n
+    2. A sales tax of 7% is required in the state of California. \n 3. Vehicles are financed at an
+    annual interest rate of 9%.</string>
+    <string name="dataEntry">Return to Data Entry</string>
+</resources>
