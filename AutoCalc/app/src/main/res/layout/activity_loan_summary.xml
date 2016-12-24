@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivLogo2"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLoanSummary"
+        android:text="@string/summary"
+        android:background="@color/steelBlue"
+        android:textColor="@color/boneWhite"
+        android:textSize="16sp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:layout_alignStart="@+id/ivLogo2"
+        android:layout_alignEnd="@+id/ivLogo2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLoanSummary"
+        android:id="@+id/tvMonthlyPayment"
+        android:textSize="18sp"
+        android:layout_alignStart="@+id/tvLoanSummary"
+        android:layout_alignEnd="@+id/tvLoanSummary"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvReport"
+        android:textSize="16sp"
+        android:typeface="monospace"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignStart="@+id/tvLoanSummary"
+        android:layout_alignEnd="@+id/tvLoanSummary"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tvMonthlyPayment"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReturn"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/dataEntry"
+        android:onClick="goDataEntry"/>
+
+
+</RelativeLayout>

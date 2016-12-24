@@ -10,8 +10,152 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.comp259.acb.autocalc.MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivLogo"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/info"
+        android:background="@color/steelBlue"
+        android:textColor="@color/boneWhite"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ivLogo"
+        android:id="@+id/tvInfo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:id="@+id/tvPrice"
+        android:layout_below="@+id/tvInfo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:textColor="@color/steelBlue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvPrice"
+        android:layout_alignBottom="@+id/tvPrice"
+        android:text="@string/dollars"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/steelBlue"
+        android:textSize="12sp"
+        android:id="@+id/tvDollar1"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPrice"
+        android:layout_toRightOf="@+id/tvDollar1"
+        android:layout_alignBottom="@+id/tvDollar1"
+        android:layout_marginLeft="5dp"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="number"
+        android:textColor="@color/steelBlue"
+        android:width="90dp">
+        <requestFocus/>
+        </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/downPayment"
+        android:id="@+id/tvDownPayment"
+        android:layout_below="@+id/tvPrice"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:textColor="@color/steelBlue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvDownPayment"
+        android:layout_alignBottom="@+id/tvDownPayment"
+        android:text="@string/dollars"
+        android:layout_marginLeft="48dp"
+        android:textColor="@color/steelBlue"
+        android:textSize="12sp"
+        android:id="@+id/tvDollar2"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDownPayment"
+        android:layout_toRightOf="@+id/tvDollar2"
+        android:layout_alignBottom="@+id/tvDollar2"
+        android:layout_marginLeft="5dp"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="number"
+        android:textColor="@color/steelBlue"
+        android:width="90dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDownPayment"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvTerm"
+        android:text="@string/loanTerm"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/steelBlue"
+        android:textSize="12sp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgTerm"
+        android:layout_below="@id/tvTerm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:background="@color/steelBlue"
+        android:paddingRight="40dp"
+        android:paddingLeft="20dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio0"
+            android:text="@string/two"
+            android:checked="true"
+            android:textSize="12sp"
+            android:textColor="@color/boneWhite"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio1"
+            android:text="@string/three"
+            android:textSize="12sp"
+            android:textColor="@color/boneWhite"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio2"
+            android:text="@string/four"
+            android:textSize="12sp"
+            android:textColor="@color/boneWhite"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReport"
+        android:text="@string/report"
+        android:layout_below="@+id/rgTerm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="activateLoanSummary"/>
+
 </RelativeLayout>

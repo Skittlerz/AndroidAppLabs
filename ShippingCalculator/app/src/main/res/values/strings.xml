@@ -103,7 +103,7 @@
         height of the room. In addition, you must also provide the number of doors and windows in
         the room; their area will not be included in the surface area to be painted. \n\n This
         calculator assumes a door is a standard measurement of 7 x 3 feet and a window is a standard
-        measurement of 4 x 4 feet. \n\n A gallon of paint will cover approximately 275 square feet. </string>
+        measurement of 4 x 4 feet. \n\n A gallon of paint will cover approximately 275 square feet.</string>
     <string name="btnReturn">Input Room Dimensions</string>
 
 </resources>
