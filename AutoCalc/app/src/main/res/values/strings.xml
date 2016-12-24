@@ -11,6 +11,7 @@
     <string name="loanTerm">Choose your loan term:</string>
     <string name="report">Loan Report</string>
     <string name="dollars">$</string>
+    <string name="briefSummary">Brief Summary</string>
 
     //Second Activity
     <string name="summary">Your loan summary.</string>

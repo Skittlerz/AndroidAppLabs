@@ -9,17 +9,25 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Auto mAuto;
-
     String loanReport;
-    String monthlyPayment;
+    //passed TO LoanSummaryActivity
+    Double downPayment;
+    String years;
+    Double price;
+    //passed FROM LoanSummaryActivity
+    Double interest;
+    Double borrowedAmount;
+    Double totalCost;
 
     private EditText etPrice;
     private EditText etDownPay;
     private RadioGroup rgTerm;
+    private TextView tvSummary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,50 +38,58 @@ public class MainActivity extends AppCompatActivity {
         etPrice = (EditText) findViewById(R.id.etPrice);
         etDownPay = (EditText) findViewById(R.id.etDownPayment);
         rgTerm = (RadioGroup) findViewById(R.id.rgTerm);
-
-        mAuto = new Auto();
+        tvSummary = (TextView) findViewById(R.id.tvSummary);
     }
 
     private void collectAutoData(){
-
-        mAuto.setmPrice(Double.parseDouble(etPrice.getText().toString()));
-        mAuto.setmDownPayment(Double.parseDouble(etDownPay.getText().toString()));
-
+        //collect user data from views
         Integer radioId = rgTerm.getCheckedRadioButtonId();
         RadioButton term = (RadioButton) findViewById(radioId);
-        mAuto.setmLoanTerm(term.getText().toString());
+
+        price = Double.parseDouble(etPrice.getText().toString());
+        downPayment = Double.parseDouble(etDownPay.getText().toString());
+        years = term.getText().toString();
     }
 
     private void buildLoanReport(){
 
         Resources res = getResources();
-        monthlyPayment = res.getString(R.string.monthlyPayment) + String.format("%.02f", mAuto.monthlyPayment());
+        //build string to display totalCost, borrowedAmount, and interestAmount using data passed to this activity
+        loanReport = res.getString(R.string.report_line5) + String.format("%.02f", totalCost);
+        loanReport += res.getString(R.string.report_line6) + String.format("%.02f", borrowedAmount);
+        loanReport += res.getString(R.string.report_line7) + String.format("%.02f", interest);
 
-        loanReport = res.getString(R.string.report_line1) + String.format("%.02f", mAuto.getmPrice());
-        loanReport += res.getString(R.string.report_line2) + String.format("%.02f", mAuto.getmDownPayment());
-
-        loanReport += res.getString(R.string.report_line4) + String.format("%.02f", mAuto.taxAmount());
-        loanReport += res.getString(R.string.report_line5) + String.format("%.02f", mAuto.totalCost());
-        loanReport += res.getString(R.string.report_line6) + String.format("%.02f", mAuto.borrowedAmount());
-        loanReport += res.getString(R.string.report_line7) + String.format("%.02f", mAuto.interestAmount());
-
-        loanReport += "\n" + res.getString(R.string.report_line3) + " " + mAuto.getmLoanTerm() + " years";
-
-        loanReport += res.getString(R.string.note_line1);
-        loanReport += res.getString(R.string.note_line2);
-        loanReport += res.getString(R.string.note_line3);
-        loanReport += res.getString(R.string.note_line4);
     }
 
     public void activateLoanSummary(View view){
 
         collectAutoData();
-        buildLoanReport();
-
+        //pass the collected user data to second activity
         Intent launchReport = new Intent(this, LoanSummaryActivity.class);
-        launchReport.putExtra("LoanReport", loanReport);
-        launchReport.putExtra("MonthlyPayment", monthlyPayment);
+        launchReport.putExtra("carPrice", price);
+        launchReport.putExtra("downPayment", downPayment);
+        launchReport.putExtra("term", years);
 
-        startActivity(launchReport);
+        startActivityForResult(launchReport,1);
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+
+        if (requestCode == 1){
+
+            if(resultCode == RESULT_OK){
+
+                //get calculated values passed from second activity
+                interest = data.getDoubleExtra("interestAmount",0);
+                borrowedAmount = data.getDoubleExtra("borrowedAmount",0);
+                totalCost = data.getDoubleExtra("totalCost",0);
+                //build report string using  passed values
+                buildLoanReport();
+                //display report
+                tvSummary.setText(loanReport);
+
+                //Toast.makeText(this, data.getData().toString(), Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
