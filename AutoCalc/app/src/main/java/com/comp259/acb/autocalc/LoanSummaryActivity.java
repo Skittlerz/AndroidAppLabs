@@ -12,7 +12,7 @@ import android.widget.TextView;
  * Created by acb on 2016-12-21.
  */
 
-public class LoanSummaryActivity extends AppCompatActivity {
+public class  LoanSummaryActivity extends AppCompatActivity {
 
     String loanReport;
     String monthlyPayment;
