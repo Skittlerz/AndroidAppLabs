@@ -12,8 +12,10 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ivLogo"/>
+        android:layout_height="100dp"
+        android:id="@+id/ivLogo"
+        android:src="@drawable/logo"
+        android:layout_alignParentEnd="false" />
 
     <TextView
         android:layout_width="match_parent"
@@ -45,7 +47,7 @@
         android:layout_toRightOf="@+id/tvPrice"
         android:layout_alignBottom="@+id/tvPrice"
         android:text="@string/dollars"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="45dp"
         android:textColor="@color/steelBlue"
         android:textSize="12sp"
         android:id="@+id/tvDollar1"/>
@@ -57,13 +59,25 @@
         android:layout_toRightOf="@+id/tvDollar1"
         android:layout_alignBottom="@+id/tvDollar1"
         android:layout_marginLeft="5dp"
-        android:ems="10"
+        android:ems="8"
         android:gravity="right"
         android:inputType="number"
         android:textColor="@color/steelBlue"
         android:width="90dp">
         <requestFocus/>
         </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/downPayment"
+        android:id="@+id/tvDownPayment"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:textColor="@color/steelBlue"
+        android:layout_below="@+id/tvPrice"
+        android:layout_alignStart="@+id/tvPrice" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -83,7 +97,7 @@
         android:layout_toRightOf="@+id/tvDollar2"
         android:layout_alignBottom="@+id/tvDollar2"
         android:layout_marginLeft="5dp"
-        android:ems="10"
+        android:ems="8"
         android:gravity="right"
         android:inputType="number"
         android:textColor="@color/steelBlue"
@@ -96,9 +110,9 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/tvTerm"
         android:text="@string/loanTerm"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/steelBlue"
-        android:textSize="12sp"/>
+        android:textSize="10sp"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -144,8 +158,9 @@
         android:text="@string/report"
         android:layout_below="@+id/rgTerm"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:onClick="activateLoanSummary"/>
+        android:layout_marginTop="10dp"
+        android:onClick="activateLoanSummary"
+        android:textSize="10sp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -155,7 +170,7 @@
         android:background="@color/steelBlue"
         android:textColor="@color/boneWhite"
         android:textSize="12sp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/btnReport"
         android:id="@+id/tvBriefSummary"/>
 
@@ -165,21 +180,11 @@
         android:id="@+id/tvSummary"
         android:layout_below="@+id/tvBriefSummary"
         android:layout_centerHorizontal="true"
-        android:textSize="16sp"
+        android:textSize="12sp"
         android:typeface="monospace"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/downPayment"
-        android:id="@+id/tvDownPayment"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="5dp"
-        android:textSize="12sp"
-        android:textColor="@color/steelBlue"
-        android:layout_below="@+id/tvPrice"
-        android:layout_alignStart="@+id/tvPrice" />
+
 
 </RelativeLayout>
