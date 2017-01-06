@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Redlands Music Events</string>
     <string name="dates">July 24 - August 9</string>
+
+    <string name="app_Menu">App Menu</string>
 </resources>
