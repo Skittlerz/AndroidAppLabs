@@ -14,12 +14,13 @@
         android:onClick="musicScreen"/>
 
     <Button
-        android:text="Button"
+        android:text="@string/app_shade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnShades"
         android:layout_below="@+id/btnMusic"
         android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="shadeScreen"/>
 
 </RelativeLayout>

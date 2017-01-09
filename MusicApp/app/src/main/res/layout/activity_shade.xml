@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:baselineAligned="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- list_fragment.xml -->
+<fragment
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="match_parent"
+    android:id="@+id/fList"
+    class="com.braun1792.musicapp.ListFragment"
+    tools:layout="@layout/list_fragment">
+</fragment>
+
+    <!-- information_fragment.xml -->
+<fragment
+    android:layout_width="0dp"
+    android:layout_weight="2"
+    android:layout_height="match_parent"
+    android:id="@+id/fInfo"
+    class="com.braun1792.musicapp.InformationFragment"
+    tools:layout="@layout/information_fragment">
+</fragment>
+
+</LinearLayout>

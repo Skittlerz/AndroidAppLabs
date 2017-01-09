@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Redlands Music Events</string>
     <string name="dates">July 24 - August 9</string>
-
     <string name="app_Menu">App Menu</string>
+    <!-- SHADE APP -->
+    <string name="app_shade">Shades</string>
+    <string name="gold">GOLD</string>
+    <string name="blue">BLUE</string>
+    <string name="plum">PLUM</string>
+
+    <string name="plum_is">Plum is a deep colour. It is used in weddings.</string>
+    <string name="blue_is">Blue is the color of peace and trust.</string>
+    <string name="gold_is">Gold is associated with sunshine and knowledge</string>
 </resources>
