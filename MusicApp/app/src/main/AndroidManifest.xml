@@ -24,7 +24,8 @@
         <activity android:name=".InformationActivity"
             android:label="@string/app_shade"
             android:parentActivityName=".ShadeActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".ShadeActivity"></meta-data>
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShadeActivity"></meta-data>
         </activity>
     </application>
 
