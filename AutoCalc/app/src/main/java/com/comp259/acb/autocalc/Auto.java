@@ -1,10 +1,11 @@
 package com.comp259.acb.autocalc;
 
+
 /**
  * Created by acb on 2016-12-21.
  */
 
-public class Auto {
+public class Auto{
 
     static final double STATE_TAX = .07;
     static final double INTEREST_RATE = .09;

@@ -7,13 +7,13 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.comp259.acb.autocalc.MainActivity">
+    android:paddingTop="@dimen/activity_vertical_margin">
+
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:id="@+id/ivLogo"
+        android:id="@+id/ivLogo2"
         android:src="@drawable/logo"
         android:layout_alignParentEnd="false" />
 
@@ -26,15 +26,15 @@
         android:textSize="12sp"
         android:gravity="center_horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/ivLogo"
-        android:id="@+id/tvInfo"/>
+        android:layout_below="@+id/ivLogo2"
+        android:id="@+id/tvInfo2"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/price"
-        android:id="@+id/tvPrice"
-        android:layout_below="@+id/tvInfo"
+        android:id="@+id/tvPrice2"
+        android:layout_below="@+id/tvInfo2"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="5dp"
@@ -44,20 +44,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/tvPrice"
-        android:layout_alignBottom="@+id/tvPrice"
+        android:layout_toRightOf="@+id/tvPrice2"
+        android:layout_alignBottom="@+id/tvPrice2"
         android:text="@string/dollars"
         android:layout_marginLeft="45dp"
         android:textColor="@color/steelBlue"
         android:textSize="12sp"
-        android:id="@+id/tvDollar1"/>
+        android:id="@+id/tvDollar12"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/etPrice"
-        android:layout_toRightOf="@+id/tvDollar1"
-        android:layout_alignBottom="@+id/tvDollar1"
+        android:id="@+id/etPrice2"
+        android:layout_toRightOf="@+id/tvDollar12"
+        android:layout_alignBottom="@+id/tvDollar12"
         android:layout_marginLeft="5dp"
         android:ems="8"
         android:gravity="right"
@@ -65,37 +65,37 @@
         android:textColor="@color/steelBlue"
         android:width="90dp">
         <requestFocus/>
-        </EditText>
+    </EditText>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/downPayment"
-        android:id="@+id/tvDownPayment"
+        android:id="@+id/tvDownPayment2"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="5dp"
         android:textSize="12sp"
         android:textColor="@color/steelBlue"
-        android:layout_below="@+id/tvPrice"
-        android:layout_alignStart="@+id/tvPrice" />
+        android:layout_below="@+id/tvPrice2"
+        android:layout_alignStart="@+id/tvPrice2" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/tvDownPayment"
-        android:layout_alignBottom="@+id/tvDownPayment"
+        android:layout_toRightOf="@+id/tvDownPayment2"
+        android:layout_alignBottom="@+id/tvDownPayment2"
         android:text="@string/dollars"
         android:layout_marginLeft="48dp"
         android:textColor="@color/steelBlue"
         android:textSize="12sp"
-        android:id="@+id/tvDollar2"/>
+        android:id="@+id/tvDollar22"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/etDownPayment"
-        android:layout_toRightOf="@+id/tvDollar2"
-        android:layout_alignBottom="@+id/tvDollar2"
+        android:id="@+id/etDownPayment2"
+        android:layout_toRightOf="@+id/tvDollar22"
+        android:layout_alignBottom="@+id/tvDollar22"
         android:layout_marginLeft="5dp"
         android:ems="8"
         android:gravity="right"
@@ -106,9 +106,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvDownPayment"
+        android:layout_below="@+id/tvDownPayment2"
         android:layout_centerHorizontal="true"
-        android:id="@+id/tvTerm"
+        android:id="@+id/tvTerm2"
         android:text="@string/loanTerm"
         android:layout_marginTop="10dp"
         android:textColor="@color/steelBlue"
@@ -117,8 +117,8 @@
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/rgTerm"
-        android:layout_below="@id/tvTerm"
+        android:id="@+id/rgTerm2"
+        android:layout_below="@id/tvTerm2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="6dp"
         android:background="@color/steelBlue"
@@ -128,7 +128,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radio0"
+            android:id="@+id/radio02"
             android:text="@string/two"
             android:checked="true"
             android:textSize="12sp"
@@ -137,7 +137,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radio1"
+            android:id="@+id/radio12"
             android:text="@string/three"
             android:textSize="12sp"
             android:textColor="@color/boneWhite"/>
@@ -145,44 +145,24 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radio2"
+            android:id="@+id/radio22"
             android:text="@string/four"
             android:textSize="12sp"
             android:textColor="@color/boneWhite"/>
     </RadioGroup>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/briefSummary"
-        android:background="@color/steelBlue"
-        android:textColor="@color/boneWhite"
-        android:textSize="12sp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/btnReport"
-        android:id="@+id/tvBriefSummary"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvSummary"
-        android:layout_below="@+id/tvBriefSummary"
+        android:id="@+id/tvSummary2"
+        android:layout_below="@+id/tvBriefSummary2"
         android:layout_centerHorizontal="true"
         android:textSize="12sp"
         android:typeface="monospace"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnReport"
-        android:text="@string/report"
-        android:onClick="activateLoanSummary"
-        android:textSize="10sp"
-        android:layout_below="@+id/rgTerm"
-        android:layout_centerHorizontal="true" />
-
-
 </RelativeLayout>
+
+
