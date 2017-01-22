@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 /**
  * Created by acb on 2017-01-21.
@@ -36,6 +36,8 @@ public class MainFragment extends Fragment {
     public void onStart(){
         super.onStart();
 
+        Button next = (Button) getActivity().findViewById(R.id.btnChangeFragment);
+        next.setText("Loan Report");
         //Set views
         etPrice = (EditText) getActivity().findViewById(R.id.etPrice2);
         etDownPay = (EditText) getActivity().findViewById(R.id.etDownPayment2);

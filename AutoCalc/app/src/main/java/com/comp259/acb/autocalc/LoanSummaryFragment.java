@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -34,6 +35,10 @@ public class LoanSummaryFragment extends Fragment {
 
     public void onStart(){
         super.onStart();
+
+        Button back = (Button) getActivity().findViewById(R.id.btnChangeFragment);
+        back.setText("Go To Data Entry");
+
         mAuto = new Auto();
         Bundle args = getArguments();
         if (args  != null && args.containsKey("term")){
