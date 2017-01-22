@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paper">
+
+    <TextView
+        android:id="@+id/tvBase2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="@dimen/output_margin_buffer"
+        android:text="@string/lblBaseCost"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/tvBaseCost2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvBase2"
+        android:layout_alignBottom="@id/tvBase2"
+        android:text="@string/zeroDec"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/output_margin_buffer"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/tvAdded2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tvBase2"
+        android:paddingTop="10dp"
+        android:text="@string/lblAddedCost"
+        android:paddingLeft="@dimen/output_margin_buffer"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/tvAddedCost2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvAdded2"
+        android:layout_alignBottom="@id/tvAdded2"
+        android:text="@string/zeroDec"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/output_margin_buffer"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/tvTotal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tvAdded2"
+        android:paddingTop="10dp"
+        android:text="@string/lblTotalCost"
+        android:paddingLeft="@dimen/output_margin_buffer"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/tvTotalCost2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvTotal2"
+        android:layout_alignBottom="@id/tvTotal2"
+        android:text="@string/zeroDec"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/output_margin_buffer"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+</RelativeLayout>

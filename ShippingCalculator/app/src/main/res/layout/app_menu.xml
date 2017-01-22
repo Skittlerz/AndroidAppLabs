@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btnShipping"
         android:id="@+id/btnShipping"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="5dp"
         android:layout_gravity="center_horizontal"
         android:onClick="shippingScreen" />
     <Button
@@ -63,5 +63,13 @@
         android:id="@+id/btnPaintCalc"
         android:layout_gravity="center_horizontal"
         android:onClick="paintCalculatorScreen"/>
+
+    <Button
+        android:text="@string/updatedShippingApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btnUpdatedShipping"
+        android:onClick="updatedShippingScreen" />
 
 </LinearLayout>

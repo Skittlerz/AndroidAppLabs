@@ -28,6 +28,12 @@ public class appMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void  updatedShippingScreen(View view)
+    {
+        Intent intent = new Intent(this, Shipping.class);
+        startActivity(intent);
+    }
+
     public void calculatorScreen(View view)
     {
         Intent intent = new Intent(this, ThirdActivity.class);

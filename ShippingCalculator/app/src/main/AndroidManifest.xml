@@ -30,6 +30,7 @@
             android:parentActivityName=".PaintingCalculatorActivity">
         <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".PaintingCalculatorActivity" />
         </activity>
+        <activity android:name=".Shipping" android:label="@string/updatedShippingApp"></activity>
 
     </application>
 
