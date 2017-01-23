@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Travel Miles Calculator</string>
+    //cities
+    <string name="regina">Regina</string>
+    <string name="edmonton">Edmonton</string>
+    <string name="vancouver">Vancouver</string>
+    <string-array name="cities">
+        <item>Regina</item>
+        <item>Edmonton</item>
+        <item>Vancouver</item>
+    </string-array>
+    //Buttons
+    <string name="calculate">Calculate</string>
+    <string name="back">Back</string>
+    //textview labels
+    <string name="from">From City:</string>
+    <string name="to">To City:</string>
+    <string name="distance">Distance:</string>
+    <string name="price">Ticket Price:</string>
+    <string name="bonus">Bonus Miles:</string>
+</resources>
