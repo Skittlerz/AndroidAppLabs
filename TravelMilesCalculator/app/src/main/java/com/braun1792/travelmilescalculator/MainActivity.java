@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         toCity = (Spinner) findViewById(R.id.spnrTo);
         fromCity = (Spinner) findViewById(R.id.spnrFrom);
 
+        //set default for strings
+        fCity = "Regina";
+        tCity = "Regina";
+
         //Set the to and from city spinners
         cAdapter = ArrayAdapter.createFromResource(this,R.array.cities, android.R.layout.simple_spinner_item);
         cAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -45,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
             switch (adapterView.getId()) {
                 case R.id.spnrTo:
                     if (i == 0) {
-                        fCity = "Regina";
+                        tCity = "Regina";
                     }else if (i == 1){
-                        fCity = "Edmonton";
-                    }else{
-                        fCity = "Vancouver";
+                        tCity = "Edmonton";
+                    }else if (i == 2){
+                        tCity = "Vancouver";
                     }
                     break;
                 case R.id.spnrFrom:
@@ -57,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                         fCity = "Regina";
                     }else if (i == 1){
                         fCity = "Edmonton";
-                    }else{
+                    }else if(i == 2){
                         fCity = "Vancouver";
                     }
                     break;
@@ -69,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-    public void btnCalculateClick(){
+    public void calculate(View view){
         Intent i = new Intent(this, SecondActivity.class);
         i.putExtra("to",tCity);
         i.putExtra("from",fCity);

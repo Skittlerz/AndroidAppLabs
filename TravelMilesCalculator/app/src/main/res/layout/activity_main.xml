@@ -61,8 +61,9 @@
         android:layout_height="wrap_content"
         android:text="@string/calculate"
         android:id="@+id/btnCalculate"
+        android:layout_marginTop="98dp"
+        android:layout_below="@+id/spnrTo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:layout_below="@+id/tvTo"/>
+        android:onClick="calculate" />
 
 </RelativeLayout>
