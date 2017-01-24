@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.braun1792.travelmilescalculator.MainActivity"
-    android:background="@drawable/appbackground">
+    android:background="@drawable/appskybackground">
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,7 +17,7 @@
         android:id="@+id/tvTitle"
         android:text="@string/app_name"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:textSize="20sp"/>
 
     <TextView
@@ -26,7 +26,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/from"
         android:id="@+id/tvFrom"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="100dp"
         android:layout_below="@+id/tvTitle"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
 
@@ -44,7 +44,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/to"
         android:id="@+id/tvTo"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="45dp"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_below="@+id/tvFrom"/>
 

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Travel Miles Calculator</string>
+    <string name="title">Travel Miles Earned</string>
     //cities
     <string name="regina">Regina</string>
     <string name="edmonton">Edmonton</string>
