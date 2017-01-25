@@ -1,6 +1,7 @@
 package com.braun1792.travelmilescalculator;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,6 +17,7 @@ public class SecondActivity extends AppCompatActivity {
     TravelCalculator tc;
     String tCity;
     String fCity;
+    String discount;
 
     TextView tvToCity;
     TextView tvFromCity;
@@ -31,8 +33,9 @@ public class SecondActivity extends AppCompatActivity {
         Intent data = getIntent();
         tCity = data.getStringExtra("to");
         fCity = data.getStringExtra("from");
+        discount = data.getStringExtra("discount");
 
-        tc = new TravelCalculator(tCity,fCity);
+        tc = new TravelCalculator(tCity,fCity, discount);
 
         tvToCity = (TextView) findViewById(R.id.tvToResult);
         tvFromCity = (TextView) findViewById(R.id.tvFromResult);
@@ -49,6 +52,16 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void backClick(View view){
+
+        Intent i = new Intent();
+
+        i.putExtra("from", fCity);
+        i.putExtra("to", tCity);
+        i.putExtra("discount", discount);
+        i.putExtra("distance", tc.getDistance());
+        i.putExtra("price", "$"+String.format("%.02f", tc.getTicketPrice()));
+        i.putExtra("bonus", tc.getBonusMiles());
+        setResult(RESULT_OK, i);
         finish();
     }
 }

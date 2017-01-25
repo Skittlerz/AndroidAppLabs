@@ -17,7 +17,7 @@
         android:id="@+id/tvTitle"
         android:text="@string/app_name"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:textSize="20sp"/>
 
     <TextView
@@ -26,7 +26,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/from"
         android:id="@+id/tvFrom"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_below="@+id/tvTitle"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
 
@@ -34,7 +34,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spnrFrom"
-        android:layout_marginTop="10dp"
         android:layout_alignBottom="@+id/tvFrom"
         android:layout_alignEnd="@id/tvTitle"/>
 
@@ -52,17 +51,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spnrTo"
-        android:layout_marginTop="10dp"
         android:layout_alignBottom="@+id/tvTo"
         android:layout_alignEnd="@+id/tvTitle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTo"
+        android:text="@string/discount"
+        android:id="@+id/tvDiscount"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDiscount"
+        android:layout_alignBottom="@+id/tvDiscount"
+        android:layout_alignEnd="@+id/tvTitle"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tvResults"
+        android:layout_below="@id/tvDiscount"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/calculate"
         android:id="@+id/btnCalculate"
-        android:layout_marginTop="98dp"
-        android:layout_below="@+id/spnrTo"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tvResults"
         android:layout_centerHorizontal="true"
         android:onClick="calculate" />
 

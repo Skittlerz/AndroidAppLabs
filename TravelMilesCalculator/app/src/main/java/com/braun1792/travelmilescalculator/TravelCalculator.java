@@ -7,13 +7,16 @@ public class TravelCalculator {
 
     String toCity;
     String fromCity;
+    String discountCode;
+    private final double DISCOUNT_AMOUNT = 0.9;
     int distance;
     double price;
     int bonusMiles;
 
-    TravelCalculator(String to, String from){
+    TravelCalculator(String to, String from, String discount){
         this.toCity = to;
         this.fromCity = from;
+        this.discountCode = discount;
         this.distance = 0;
         this.price = 0.0;
         this.bonusMiles = 0;
@@ -53,6 +56,10 @@ public class TravelCalculator {
                 ((toCity.equals("Edmonton")) && fromCity.equals("Vancouver")))
         {
             price = 195.00;
+        }
+
+        if(discountCode.equals("savings")){
+            price *= DISCOUNT_AMOUNT;
         }
 
         return price;
