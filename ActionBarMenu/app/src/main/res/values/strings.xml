@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ActionBarMenu</string>
+    <string name="tabname_breakfast">Breakfast</string>
+    <string name="tabname_lunch">Lunch</string>
+    <string name="tabname_dinner">Dinner</string>
+    <string name="tabname_snack">Snack</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_quit">Quit</string>
+
+</resources>
